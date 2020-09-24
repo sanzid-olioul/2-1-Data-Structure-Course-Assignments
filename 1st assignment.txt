@@ -1,0 +1,27 @@
+Write a program to calculate the SGPA and the merit position 
+of a student. You must use the concept of OOP.
+
+Input:
+Student ID: 190101
+Course 1: 3.50
+Course 2: 3.75
+Course 3: 4.00
+
+Student ID: 190102
+Course 1: 3.00
+Course 2: 3.25
+Course 3: 4.00
+
+Student ID: 190103
+Course 1: 3.50
+Course 2: 3.25
+Course 3: 3.00
+
+Enter the student ID: 190101
+
+Output:
+CGPA of Student ID 190101 is 3.75
+Merit position: 1
+
+-What is the Composition and how it differs from Inheritance?
+-Practice some working examples.
