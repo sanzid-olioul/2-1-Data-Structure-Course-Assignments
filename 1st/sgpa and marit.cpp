@@ -5,7 +5,7 @@ class Informations{
         float course[3];
         float cgpa;
     public:
-        Informations(int id,float c1,float c2,float c3);
+        void input();
         int ID();
         float CGPA();
 };
@@ -17,10 +17,20 @@ class Results{
         Results(Informations a,Informations b,Informations c);
         void finds(int roll);
 };
-Informations::Informations(int id,float c1,float c2,float c3):studentID(id),course{c1,c2,c3}{
-    cgpa = course[0]+course[1]+course[2];
+
+
+
+void Informations::input(){
+    std::cout<<"Enter the student ID : ";
+    std::cin>>studentID;
+    cgpa =0;
+    for(int i=0;i<3;i++){
+        std::cout<<"Enter the GPA for course "<<i+1<<" :";
+        std::cin>>course[i];
+        cgpa+= course[i];
+    }
     cgpa/=3;
-};
+}
 int Informations::ID(){
     return studentID;
 }
@@ -70,11 +80,14 @@ void Results::finds(int roll){
 }
 int main()
 {
-    Informations s1(190101,3.50,3.75,4.00),s2(190102,3.00,3.25,4.00),s3(190103,3.50,3.25,3.00);
-
+    Informations s1,s2,s3;
+    s1.input();
+    s2.input();
+    s3.input();
+    int roll;
     Results Rs(s1,s2,s3);
-    Rs.finds(190102);
-
-
+    std::cout<<"Enter Student ID to find :";
+    std::cin>>roll;
+    Rs.finds(roll);
     return 0;
 }
